@@ -1,0 +1,40 @@
+curl -X POST http://localhost:4000/auth/login -H "Content-Type: application/json" 
+  -d "{\"name\":\"Alice\",\"email\":\"alice@test.com\",\"password\":\"pass123\"}"
+
+
+
+
+
+
+
+curl -X POST http://localhost:4000/messages/send -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWFlNWY5MGQzYTg2MzVlNmU2NGE0ZCIsImlhdCI6MTc1NjEwMDUzOCwiZXhwIjoxNzU2NzA1MzM4fQ.UwaGxogE8PfaTIXRPz2HmyNJwjOoxS662bEKHiuXA7s" 
+-H "Content-Type: application/json" -d '{"receiverId":"<OTHER_USER_ID>", "content":"Hello!"}'
+
+
+Sender : Alice
+Receiver: Bob
+
+
+curl -X POST http://localhost:4000/messages/send -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWFlNWY5MGQzYTg2MzVlNmU2NGE0ZCIsImlhdCI6MTc1NjA2MzA3OCwiZXhwIjoxNzU2NjY3ODc4fQ.uXhWmzF1y196BqaIXCHVkE5vljeXu1r9aezD9yK-CdQ" -H "Content-Type: application/json" -d "{\"receiverId\":\"68ab4d706321f550b5a34d14\", \"content\":\"Hello!\"}"
+
+
+sender token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWFlNWY5MGQzYTg2MzVlNmU2NGE0ZCIsImlhdCI6MTc1NjA2MTg0NSwiZXhwIjoxNzU2NjY2NjQ1fQ.8yhPB9V-xlIXWT1JP01-1UvvuCxF4pcN3KUCFvpLLOU
+
+
+
+
+receiver id = 68ab4d706321f550b5a34d14
+
+
+
+curl -X GET http://localhost:4000/messages/68ab4d706321f550b5a34d14 -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWFlNWY5MGQzYTg2MzVlNmU2NGE0ZCIsImlhdCI6MTc1NjA2MzA3OCwiZXhwIjoxNzU2NjY3ODc4fQ.uXhWmzF1y196BqaIXCHVkE5vljeXu1r9aezD9yK-CdQ"
+
+
+
+
+
+
+JWT TOKEN  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWFlNWY5MGQzYTg2MzVlNmU2NGE0ZCIsImlhdCI6MTc1NjEwMDUzOCwiZXhwIjoxNzU2NzA1MzM4fQ.UwaGxogE8PfaTIXRPz2HmyNJwjOoxS662bEKHiuXA7s"
+
+receiver id :  "68ab4d706321f550b5a34d14
+
