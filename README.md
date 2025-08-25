@@ -4,13 +4,13 @@
 # setup
 
 - Create Expo-Go React Native app
-- ```
+ ```
   npx create-expo-app mobile
   cd mobile
   npm install axios socket.io-client @react-navigation/native @react-navigation/stack
-  ```
+ ```
 
-- Run the node server
+# Run the node server
 - If node.js is not installed then first install node.js
   ```
   mkdir server && cd server
