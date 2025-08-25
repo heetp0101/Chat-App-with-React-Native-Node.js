@@ -24,6 +24,7 @@
  PORT=4000
  MONGO_URI=<MONGO DB CONNECTION STRING>
  JWT_SECRET=<JWT SECRET KEY>
+ CORS_ORIGIN=*
  ```
 
 # sample users
@@ -35,4 +36,4 @@
  Heet
  Vrutik
  ```
-CORS_ORIGIN=*
+
